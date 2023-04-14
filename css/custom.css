@@ -1,0 +1,114 @@
+
+/* .menu-toggle::before{
+    content: "__";
+    position: relative;
+    top: 23.7px;
+    font-weight: bold;
+    right: -17px;
+} */
+.menu-toggle{
+  transition: all 1s;
+}
+.menu-toggle:hover img{
+    
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.2);
+    
+}
+.menu-toggle:hover   nav{
+  transition: all 1.5s;
+  right: 0px;
+}
+
+
+
+
+
+/*TRANSITION TITRE */
+.hero h1{
+    transition: transform 0.8s;
+}
+.hero h1:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.2); 
+  }
+
+
+  .fa:hover{
+    transform: rotateZ(-20deg);
+  }
+
+.title p:hover{
+    animation:  shake 1s  ;
+    }
+    @keyframes shake{
+    0%{
+        transform: translateX(0)
+    }
+    25%{
+    transform: translateX(25px);
+   }
+    
+    50%{
+   transform: translateX(-25px);
+    }
+    100%{
+    transform: translateX(0px);
+   }
+    }
+
+
+    .service-img img{
+    transform: scaleX(0.7);
+height: 82.1%;
+    }
+
+    .portfolio-item{
+        transition: transform .5s;
+    }
+    .portfolio-item:hover{
+         -ms-transform: scale(1.5); 
+        -webkit-transform: scale(1.5); 
+        transform: scale(1.2);
+        filter: contrast(1.1);
+    }
+     
+
+
+     .btn-wrap a {
+        display:block;                /* Transformation en block */
+        min-width: 120px;             /* Largeur minimale des liens */          
+        margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+        text-align: center;           /* Centrage du texte */   
+        border-radius: 4px;           /* Arrondis des bordures */
+        text-decoration: none;
+    }
+    .btn-wrap a:hover {
+        background-color: #10CAB7;
+        color: #fff;
+        border-color: #fff;
+        transition: all 0.5s;
+      }
+
+      .about-img img{
+        transform: scaleY(1.2);
+      }
+      /* .about-img img:hover{
+        transform: skewX(15deg);
+        transition: all 0.5s;
+      } */
+
+      .about-text:hover .separator{
+        width: 100%;
+        transition: all 0.5s;
+
+      }
+
+
+      .service-img:hover .shape{
+        width: 350px;
+        top:4px;
+        transition: all 0.8s;
+      }

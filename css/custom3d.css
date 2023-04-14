@@ -1,0 +1,93 @@
+/* 3d logo */
+:root {
+    --size: 40px;
+  }
+  .cube{
+    margin: 0rem auto 0;
+    width:var(--size);
+    height:var(--size);
+    transform-style: preserve-3d;
+    /* transform: rotateY(30deg) rotateZ(30deg) rotateX(0deg); */
+    animation: spin 20s infinite linear;
+  }
+  .side{
+    position:absolute;
+    opacity: 0.85;
+    width:50px;
+    height:var(--size);;
+  }
+  #front{
+    background: url(../img/logo.svg) no-repeat center/cover;
+    transform: translateZ(calc(var(--size) / 2)); 
+  }
+  #top{
+    background: url(../img/logo.svg) no-repeat center/cover;
+    transform: rotateX(-270deg) translateY(calc(-1 * ( var(--size) / 2 ) ) );
+    transform-origin: top center;
+  }
+  #bottom{
+    background: url(../img/logo.svg) no-repeat center/cover;  
+    transform: rotateX(270deg) translateY(calc( var(--size) / 2) );
+    transform-origin: bottom center; 
+  }
+  #right{
+    background: url(../img/logo.svg) no-repeat center/cover;
+    transform: rotateY(-270deg) translateX(calc( var(--size) / 2) );
+    transform-origin: top right;
+  }
+  #left{
+    background: url(../img/logo.svg) no-repeat center/cover;
+    transform: rotateY(270deg) translateX(calc(-1 * ( var(--size) / 2 ) ));
+    transform-origin: center left;
+  }
+  #back{
+    background: url(./img/logo.svg) no-repeat center/cover;
+    transform: rotateY(-180deg) translateZ(calc(( var(--size) / 2 ) ));
+  }
+  
+  @keyframes spin {
+      from {
+      transform: rotateY(0) rotateZ(0) rotateX(0);  
+    }
+      to {
+      transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
+    }
+  }
+
+/* 3d boutton */
+  a.button2 {
+
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 10px;
+    text-decoration: none;
+    color: #fff !important;
+    background-color:#2c4755;
+    border-radius: 4px;
+    text-shadow: 0 -1px -1px #2a94af;
+    /*box-shadow: 0 4px 0 #10cab7, 0 5px 5px 1px rgba(0, 0, 0, 0.4);*/
+    box-shadow: 4px 4px 7px #10cab7;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  
+      /* color: rgba(44, 71, 85, 1);
+      box-shadow: rgba(44, 71, 85, 0.9) 0 0px 0px 1px inset; */
+  }
+  a.button2:hover{
+    box-shadow: 4px 4px 7px #2c4755;
+  }
+  
+  a.button2:active {
+      /* margin-top: -18px; */
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .about-img img:hover{
+      transform: rotateY(150deg);
+      transition: all 2s;
+      border: 8px solid #2a94af;
+       box-shadow: 5px ;
+    }
